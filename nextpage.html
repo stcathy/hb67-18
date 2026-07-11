@@ -19,26 +19,37 @@
         </div>
 
 
-        <div class="letter">
-            <h1>Поздравление 💗</h1>
+      <div class="letter" id="letter">
 
-            <div class="text">
-                <p>
-                    Здесь будет текст поздравления.
-                </p>
+    <div class="closed-letter">
+        💌
+        <p>Нажми, чтобы открыть ;3 ))</p>
+    </div>
 
-                <p>
-                    Можно сделать длинный текст, который будет прокручиваться внутри окошка.
-                </p>
+    <div class="opened-letter">
+        <h1>Ух ты!</h1>
 
-                <p>
-                    Ещё можно добавить картинки, украшения и красивые разделители.
-                </p>
-            </div>
+        <div class="text">
+            <p>
+                Здесь будет твой текст поздравления.
+            </p>
+
+            <p>
+                Можно сделать длинный текст, который будет прокручиваться внутри окошка.
+            </p>
         </div>
+    </div>
+
+</div>
 
     </div>
 
 </body>
+<script>
+    const letter = document.getElementById('letter');
 
+    letter.addEventListener('click', () => {
+        letter.classList.toggle('open');
+    });
+</script>
 </html>
