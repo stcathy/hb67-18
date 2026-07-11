@@ -26,29 +26,38 @@
     </div>
 
 
-    <script>
+   <script>
 
-        const modal = document.getElementById('modal');
-        const yesBtn = document.getElementById('yesBtn');
-        const noBtn = document.getElementById('noBtn');
+function showLoader(url) {
+    const loader = document.getElementById('loader');
 
+    loader.style.display = 'flex';
 
-        yesBtn.addEventListener('click', () => {
-            window.location.href = 'nextpage.html';
-        });
+    setTimeout(() => {
+        window.location.href = url;
+    }, 1500);
+}
 
+const modal = document.getElementById('modal');
+const yesBtn = document.getElementById('yesBtn');
+const noBtn = document.getElementById('noBtn');
 
-        noBtn.addEventListener('click', () => {
-            window.location.href = 'no.html';
-        });
+yesBtn.addEventListener('click', () => {
+    showLoader('nextpage.html');
+});
 
+noBtn.addEventListener('click', () => {
+    showLoader('no.html');
+});
 
-        window.onload = () => {
-            modal.style.display = 'block';
-        };
+window.onload = () => {
+    modal.style.display = 'block';
+};
 
-    </script>
-
+</script>
 </body>
-
+<div id="loader" class="loader">
+    <img src="./catbb-gif.gif" alt="Loading">
+    <p>Загрузка...</p>
+</div>
 </html>
