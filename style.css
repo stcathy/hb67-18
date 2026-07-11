@@ -209,6 +209,7 @@ h1 {
     text-align: center;
     color: #d94f8a;
     margin-top: 40px;
+    margin-bottom: 20px;
 }
 
 
@@ -216,7 +217,7 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
+    gap: 35px;
     padding: 40px;
 }
 
@@ -225,18 +226,90 @@ h1 {
     background: white;
     padding: 12px 12px 40px 12px;
     width: 250px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
     border-radius: 5px;
-    transition: 0.3s;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+
+    animation: sway 5s ease-in-out infinite;
+    transition: transform 0.3s ease;
 }
 
 
 .photo:hover {
-    transform: scale(1.05);
+    transform: scale(1.08) !important;
+    z-index: 10;
 }
 
 
 .photo img {
     width: 100%;
     display: block;
+}
+
+
+/* Разные углы */
+
+.photo:nth-child(1) {
+    transform: rotate(-4deg);
+}
+
+.photo:nth-child(2) {
+    transform: rotate(3deg);
+}
+
+.photo:nth-child(3) {
+    transform: rotate(-2deg);
+}
+
+.photo:nth-child(4) {
+    transform: rotate(5deg);
+}
+
+.photo:nth-child(5) {
+    transform: rotate(-5deg);
+}
+
+.photo:nth-child(6) {
+    transform: rotate(2deg);
+}
+
+.photo:nth-child(7) {
+    transform: rotate(-3deg);
+}
+
+.photo:nth-child(8) {
+    transform: rotate(4deg);
+}
+
+
+/* Разная скорость качания */
+
+.photo:nth-child(2n) {
+    animation-duration: 6s;
+}
+
+.photo:nth-child(3n) {
+    animation-duration: 4.5s;
+}
+
+.photo:nth-child(4n) {
+    animation-duration: 7s;
+}
+
+
+/* Покачивание */
+
+@keyframes sway {
+
+    0% {
+        transform: rotate(-3deg);
+    }
+
+    50% {
+        transform: rotate(3deg);
+    }
+
+    100% {
+        transform: rotate(-3deg);
+    }
+
 }
