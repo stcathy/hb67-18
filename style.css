@@ -534,3 +534,37 @@ h1 {
     transform: translateY(-180px);
     opacity: 1;
 }
+.secret-box {
+
+    display: none;
+
+    position: fixed;
+    inset: 0;
+
+    background: rgba(255, 210, 230, 0.7);
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+}
+
+
+.secret-content {
+
+    background: #f8e8c8;
+
+    width: 350px;
+
+    padding: 30px;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    color: #8b5a3c;
+
+    box-shadow: 0 0 30px rgba(255,105,180,0.4);
+
+    animation: appear 0.5s ease;
+}
