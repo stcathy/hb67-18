@@ -1,3 +1,4 @@
+
 body {
     background: linear-gradient(135deg, #ffe6f0, #ffd1e3);
     margin: 0;
@@ -511,4 +512,25 @@ h1 {
         transform: translateY(-50px) scale(0.8);
     }
 
+}
+.letter-paper {
+    position: absolute;
+    background: #f8e8c8;
+    width: 380px;
+    min-height: 260px;
+    left: 35px;
+    top: 50px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: #8b5a3c;
+    transform: translateY(250px);
+    transition: 1s ease;
+    opacity: 0;
+    z-index: 2;
+}
+
+.envelope.opened .letter-paper {
+    transform: translateY(-180px);
+    opacity: 1;
 }
