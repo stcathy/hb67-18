@@ -313,3 +313,26 @@ h1 {
     }
 
 }
+.loader {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 230, 240, 0.97);
+    z-index: 9999;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader img {
+    width: 220px;
+    height: auto;
+}
+
+.loader p {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #d94f8a;
+    font-weight: bold;
+}
