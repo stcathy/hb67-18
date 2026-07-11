@@ -100,13 +100,13 @@ button {
 
 
 .letter {
-    background: #ffd6e7;
+    background: #f8e8c8;
     width: 500px;
     height: 500px;
     padding: 30px;
     border-radius: 30px;
-    box-shadow: 0 5px 20px rgba(255, 105, 180, 0.3);
-    color: #d94f8a;
+    box-shadow: 0 5px 20px rgba(180, 130, 70, 0.25);
+    color: #8b5a3c;
     text-align: center;
 }
 
