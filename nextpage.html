@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Поздравление</title>
+    <title>Письмо</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,58 +13,59 @@
     <div class="page">
 
         <div class="menu">
-            <button onclick="window.location.href='gallery.html'">
-     Гости!!!
-</button>
-            <button>Тут про тебя поют...</button>
-            <button onclick="window.location.href='https://t.me/flyffch'">
-    💌 Я!!
-</button>
+            <button onclick="showLoader('gallery.html')">
+                🖼 Галерея
+            </button>
+
+            <button>
+                🎵 Плейлист
+            </button>
+
+            <button onclick="showLoader('https://t.me/flyffch')">
+                💌 Telegram
+            </button>
         </div>
 
 
-        <div class="letter" id="letter">
+        <div class="envelope" id="envelope">
 
-            <div class="closed-letter">
-                💌
-                <p>Нажми, чтобы открыть</p>
-            </div>
+            <div class="flap"></div>
 
-
-            <div class="opened-letter">
+            <div class="letter-paper">
 
                 <h1>Поздравление 💗</h1>
 
                 <div class="text">
-
                     <p>
-                        Здесь будет твой текст поздравления.
+                        Здесь будет твоё письмо.
                     </p>
 
                     <p>
-                        Можешь написать сюда всё, что хочешь сказать.
+                        Пока это только начало...
                     </p>
-
-                    <p>
-                        Это будет большое письмо с прокруткой.
-                    </p>
-
                 </div>
 
             </div>
 
+            <p class="open-text">
+                Нажми, чтобы открыть 💌
+            </p>
+
         </div>
+
 
     </div>
 
 
-    <script>
-        const letter = document.getElementById("letter");
+<script>
 
-        letter.addEventListener("click", function () {
-            letter.classList.toggle("open");
-        });
-    </script>
+const envelope = document.getElementById("envelope");
+
+envelope.addEventListener("click", function() {
+    envelope.classList.add("opened");
+});
+
+</script>
 
 
 </body>
