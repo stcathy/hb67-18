@@ -364,7 +364,7 @@ h1 {
 
     transform-origin: top;
     transition: 1s;
-    z-index: 3;
+    z-index: 1;
 }
 
 
@@ -388,7 +388,7 @@ h1 {
     transform: translateY(80px);
     transition: 1s;
 
-    z-index: 2;
+    z-index: 3;
 }
 
 
