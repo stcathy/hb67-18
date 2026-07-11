@@ -655,3 +655,75 @@ h1 {
     transform:scale(1.4);
 
 }
+.letter-layout {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: center;
+
+    gap: 40px;
+
+}
+
+
+.memory-box {
+
+    width: 220px;
+
+    text-align: center;
+
+}
+
+
+#memory-photos {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+
+.memory-photo {
+
+    width: 160px;
+
+    background: white;
+
+    padding: 8px;
+
+    border-radius: 8px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+
+    animation: photoAppear 0.7s ease;
+
+}
+
+
+@keyframes photoAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateX(50px) rotate(10deg);
+
+    }
+
+
+    to {
+
+        opacity: 1;
+
+        transform: translateX(0) rotate(0);
+
+    }
+
+}
