@@ -18,9 +18,9 @@
             🖼 Галерея
         </button>
 
-        <button>
-            🎵 Плейлист
-        </button>
+        <button onclick="openSecret()">
+    💌 Секрет
+</button>
 
         <button onclick="showLoader('https://t.me/flyffch')">
             💌 Telegram
@@ -99,10 +99,33 @@ function showLoader(url) {
     }
 
 }
+function openSecret() {
+    document.getElementById("secret").style.display = "flex";
+}
 
+
+function closeSecret() {
+    document.getElementById("secret").style.display = "none";
+}
 </script>
 
+<div class="secret-box" id="secret">
 
+    <div class="secret-content">
+
+        <h2>💌 Секрет</h2>
+
+        <p>
+            Люблююю тебя больше всех на свете, Масенька
+        </p>
+
+        <button onclick="closeSecret()">
+            Закрыть
+        </button>
+
+    </div>
+
+</div>
 </body>
 
 </html>
