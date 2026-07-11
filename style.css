@@ -22,16 +22,10 @@
     color: #d94f8a;
 }
 
-.tenor-gif-embed,
-.tenor-gif-embed iframe,
-.tenor-gif-embed div {
-    background: transparent !important;
-}
-
-.tenor-gif-embed {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+.gif {
+    width: 150px;
+    height: auto;
+    margin-bottom: 15px;
 }
 
 button {
