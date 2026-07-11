@@ -57,6 +57,7 @@
     <p>
         Я долго думала, как начать это письмо(!!!!!!), потому что мне кажется,
         что никакие слова не смогут полностью передать всё, что я чувствую и сколько всего хочется тебе сказать.
+        <span class="secret-symbol" onclick="findPhoto(0)">⭐</span>
     </p>
 
     <p>
@@ -75,12 +76,14 @@
     <p>
         Мы познакомились ещё совсем малюсенькими,
         когда даже не могли представить,
-        из-за скольки дуростей нам ещё предстоит пересраться.
+        из-за скольки дуростей нам ещё предстоит пересраться. 
+        <span class="secret-symbol" onclick="findPhoto(1)">💗</span>
     </p>
 
     <p>
         За это время мы оба изменились,
         чучут выросли,
+        <span class="secret-symbol" onclick="findPhoto(2)">🌙</span>
         узнали друг друга с разных сторон.
     </p>
 
@@ -88,7 +91,8 @@
         У нас были разные периоды — лёгкие и сложные,
         счастливые и непростые,
         но, несмотря ни на что,
-        ты остался для меня очень важным человеком,
+        ты остался для меня очень важным человеком
+        <span class="secret-symbol" onclick="findPhoto(3)">🦊</span> ,
         даже не будь рядом очень долго.
     </p>
 
@@ -138,6 +142,7 @@
         Спасибо за то,
         что ты был частью моей жизни
         и оставил в ней такой большой след.
+        <span class="secret-symbol" onclick="findPhoto(4)">✨</span>
     </p>
 
     <p>
@@ -156,6 +161,7 @@
         и того чувства,
         когда ты понимаешь,
         что находишься на своём месте.
+        <span class="secret-symbol" onclick="findPhoto(3)">🦊</span> 
     </p>
 
     <p>
@@ -178,7 +184,9 @@
     <p>
         С днём рождения тебя. ;3
         Я очень тебя ценю и хочу,
-        чтобы ты был счастлив.
+        чтобы ты был счастлив. 
+        <span class="secret-symbol" onclick="findPhoto(5)">🔑</span>
+
     </p>
 
     <p>
@@ -188,7 +196,20 @@
 </div>
 
     </div>
+<div class="memory-box">
 
+    <h3>
+        Катюш собрал:: 
+        <span id="counter">0/6</span>
+    </h3>
+
+    <div id="memory-photos"></div>
+
+    <button id="secret-next" onclick="openSecretPage()">
+        ✨ Дальше
+    </button>
+
+</div>
 
     <p class="open-text">
         Нажми, чтобы открыть 💌
@@ -233,6 +254,51 @@ function openSecret() {
 
 function closeSecret() {
     document.getElementById("secret").style.display = "none";
+}
+    let foundPhotos = [];
+
+let photos = [
+"photos/изображение_2026-07-11_234519595.png",
+"photos/изображение_2026-07-11_234507024.png",
+"photos/изображение_2026-07-11_234448924.png",
+"photos/изображение_2026-07-11_234434087.png",
+"photos/изображение_2026-07-11_234419261.png",
+"photos/изображение_2026-07-11_234358825.png"
+];
+
+
+function findPhoto(number) {
+
+    if(foundPhotos.includes(number)) {
+        return;
+    }
+
+    foundPhotos.push(number);
+
+
+    let img = document.createElement("img");
+
+    img.src = photos[number];
+
+    img.className = "memory-photo";
+
+
+    document
+    .getElementById("memory-photos")
+    .appendChild(img);
+
+
+    document.getElementById("counter").innerHTML =
+    foundPhotos.length + "/6";
+
+
+    if(foundPhotos.length === 6){
+
+        document.getElementById("secret-next")
+        .style.display = "block";
+
+    }
+
 }
 </script>
 
