@@ -10,60 +10,81 @@
 
 <body>
 
-    <div class="page">
+<div class="page">
 
-        <div class="menu">
-            <button onclick="showLoader('gallery.html')">
-                🖼 Галерея
-            </button>
+    <div class="menu">
 
-            <button>
-                🎵 Плейлист
-            </button>
+        <button onclick="showLoader('gallery.html')">
+            🖼 Галерея
+        </button>
 
-            <button onclick="showLoader('https://t.me/flyffch')">
-                💌 Telegram
-            </button>
-        </div>
+        <button>
+            🎵 Плейлист
+        </button>
 
-
-        <div class="envelope" id="envelope">
-
-            <div class="flap"></div>
-
-            <div class="letter-paper">
-
-                <h1>Поздравление 💗</h1>
-
-                <div class="text">
-                    <p>
-                        Здесь будет твоё письмо.
-                    </p>
-
-                    <p>
-                        Пока это только начало...
-                    </p>
-                </div>
-
-            </div>
-
-            <p class="open-text">
-                Нажми, чтобы открыть 💌
-            </p>
-
-        </div>
-
+        <button onclick="showLoader('https://t.me/flyffch')">
+            💌 Telegram
+        </button>
 
     </div>
+
+
+    <div class="envelope" id="envelope">
+
+        <div class="flap"></div>
+
+        <div class="letter-paper">
+
+            <h1>Поздравление 💗</h1>
+
+            <div class="text">
+                <p>
+                    Здесь будет твоё письмо.
+                </p>
+
+                <p>
+                    Скоро здесь появится целая история...
+                </p>
+            </div>
+
+        </div>
+
+
+        <p class="open-text">
+            Нажми, чтобы открыть 💌
+        </p>
+
+    </div>
+
+
+</div>
 
 
 <script>
 
 const envelope = document.getElementById("envelope");
 
-envelope.addEventListener("click", function() {
+envelope.addEventListener("click", function(){
     envelope.classList.add("opened");
 });
+
+
+function showLoader(url) {
+
+    const loader = document.getElementById("loader");
+
+    if(loader){
+        loader.style.display = "flex";
+
+        setTimeout(() => {
+            window.location.href = url;
+        }, 1500);
+
+    } else {
+        window.location.href = url;
+    }
+
+}
 
 </script>
 
