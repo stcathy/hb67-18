@@ -108,6 +108,37 @@ button {
     box-shadow: 0 5px 20px rgba(180, 130, 70, 0.25);
     color: #8b5a3c;
     text-align: center;
+    cursor: pointer;
+}
+
+
+.closed-letter {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+}
+
+
+.closed-letter p {
+    font-size: 18px;
+}
+
+
+.opened-letter {
+    display: none;
+}
+
+
+.letter.open .closed-letter {
+    display: none;
+}
+
+
+.letter.open .opened-letter {
+    display: block;
 }
 
 
