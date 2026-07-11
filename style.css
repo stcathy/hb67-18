@@ -2,7 +2,12 @@ body {
     background: linear-gradient(135deg, #ffe6f0, #ffd1e3);
     margin: 0;
     min-height: 100vh;
+    font-family: Arial, sans-serif;
 }
+
+
+/* Первое окно */
+
 .modal {
     display: none;
     position: fixed;
@@ -13,6 +18,7 @@ body {
     height: 100%;
     background: rgba(255, 182, 193, 0.5);
 }
+
 
 .modal-content {
     background: #ffd6e7;
@@ -29,6 +35,7 @@ body {
     animation: appear 0.6s ease, bounce 1.5s ease 0.6s infinite;
 }
 
+
 @keyframes appear {
     from {
         opacity: 0;
@@ -40,6 +47,7 @@ body {
         transform: translateY(0) scale(1);
     }
 }
+
 
 @keyframes bounce {
     0%, 100% {
@@ -71,7 +79,7 @@ button {
 }
 
 
-/* Вторая страница */
+/* Страница письма */
 
 .page {
     min-height: 100vh;
@@ -112,36 +120,6 @@ button {
 }
 
 
-.closed-letter {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 60px;
-}
-
-
-.closed-letter p {
-    font-size: 18px;
-}
-
-
-.opened-letter {
-    display: none;
-}
-
-
-.letter.open .closed-letter {
-    display: none;
-}
-
-
-.letter.open .opened-letter {
-    display: block;
-}
-
-
 .text {
     height: 380px;
     overflow-y: auto;
@@ -151,4 +129,29 @@ button {
 
 h1 {
     margin-top: 0;
+}
+
+
+/* Страница после кнопки "Нет" */
+
+.no-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.no-box {
+    background: #ffd6e7;
+    padding: 40px;
+    border-radius: 30px;
+    text-align: center;
+    color: #d94f8a;
+    box-shadow: 0 5px 20px rgba(255, 105, 180, 0.3);
+}
+
+
+.no-box h1 {
+    font-size: 35px;
 }
