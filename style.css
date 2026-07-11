@@ -20,7 +20,68 @@ body {
     background: rgba(255, 182, 193, 0.5);
 }
 
+.secret-page {
 
+    min-height: 100vh;
+
+    background: radial-gradient(circle, #ffb6d9, #2b0015);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+.secret-container {
+
+    text-align: center;
+
+}
+
+
+.secret-glow {
+
+    padding: 40px;
+
+    color: white;
+
+}
+
+
+.secret-letter {
+
+    background: #fff0f5;
+
+    color: #8b4560;
+
+    width: 450px;
+
+    padding: 30px;
+
+    border-radius: 25px;
+
+    box-shadow: 0 0 40px rgba(255,182,193,0.8);
+
+}
+
+
+.secret-gif {
+
+    width: 180px;
+
+}
+
+
+.big-text {
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+}
 .modal-content {
     background: #ffd6e7;
     margin: 12% auto;
