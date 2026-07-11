@@ -205,9 +205,9 @@
 
     <div id="memory-photos"></div>
 
-    <button id="secret-next" onclick="openSecretPage()">
-        ✨ Дальше
-    </button>
+    <button id="secret-next" onclick="goSecret()" style="display:none;">
+    ✨ Открыть дальше
+</button>
 
 </div>
 
@@ -299,6 +299,9 @@ document.getElementById("secret-next").onclick = function(){
     window.location.href = "secret.html";
 }
 
+}
+    function goSecret() {
+    window.location.href = "secret.html";
 }
 </script>
 
