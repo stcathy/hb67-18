@@ -436,3 +436,79 @@ h1 {
 .envelope.opened .letter-paper {
     animation: glow 2s ease-in-out infinite;
 }
+.sparkles {
+    display: none;
+    position: absolute;
+    inset: -80px;
+    pointer-events: none;
+}
+
+
+.envelope.opened .sparkles {
+    display: block;
+}
+
+
+.sparkles span {
+    position: absolute;
+    font-size: 25px;
+    animation: float 3s ease-in-out infinite;
+}
+
+
+/* разные позиции */
+
+.sparkles span:nth-child(1) {
+    left: 10%;
+    top: 20%;
+}
+
+.sparkles span:nth-child(2) {
+    left: 80%;
+    top: 15%;
+    animation-delay: 0.5s;
+}
+
+.sparkles span:nth-child(3) {
+    left: 20%;
+    top: 70%;
+    animation-delay: 1s;
+}
+
+.sparkles span:nth-child(4) {
+    left: 75%;
+    top: 65%;
+    animation-delay: 1.5s;
+}
+
+.sparkles span:nth-child(5) {
+    left: 50%;
+    top: 5%;
+    animation-delay: 2s;
+}
+
+.sparkles span:nth-child(6) {
+    left: 90%;
+    top: 50%;
+    animation-delay: 2.5s;
+}
+
+
+@keyframes float {
+
+    0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.8);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(-20px) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.8);
+    }
+
+}
