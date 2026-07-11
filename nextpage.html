@@ -226,9 +226,13 @@
 
 const envelope = document.getElementById("envelope");
 
-envelope.addEventListener("click", function(){
-    envelope.classList.add("opened");
-});
+if (envelope) {
+
+    envelope.addEventListener("click", function(){
+        envelope.classList.add("opened");
+    });
+
+}
 
 
 function showLoader(url) {
@@ -236,75 +240,149 @@ function showLoader(url) {
     const loader = document.getElementById("loader");
 
     if(loader){
+
         loader.style.display = "flex";
 
         setTimeout(() => {
+
             window.location.href = url;
+
         }, 1500);
 
     } else {
+
         window.location.href = url;
+
     }
 
 }
+
+
+
 function openSecret() {
-    document.getElementById("secret").style.display = "flex";
+
+    const secret = document.getElementById("secret");
+
+    if(secret){
+
+        secret.style.display = "flex";
+
+    }
+
 }
+
 
 
 function closeSecret() {
-    document.getElementById("secret").style.display = "none";
+
+    const secret = document.getElementById("secret");
+
+    if(secret){
+
+        secret.style.display = "none";
+
+    }
+
 }
-    let foundPhotos = [];
+
+
+
+
+let foundPhotos = [];
+
 
 let photos = [
+
 "photos/изображение_2026-07-11_234519595.png",
+
 "photos/изображение_2026-07-11_234507024.png",
+
 "photos/изображение_2026-07-11_234448924.png",
+
 "photos/изображение_2026-07-11_234434087.png",
+
 "photos/изображение_2026-07-11_234419261.png",
+
 "photos/изображение_2026-07-11_234358825.png"
+
 ];
+
+
 
 
 function findPhoto(number) {
 
+
     if(foundPhotos.includes(number)) {
+
         return;
+
     }
+
 
     foundPhotos.push(number);
 
 
+
     let img = document.createElement("img");
 
+
     img.src = photos[number];
+
 
     img.className = "memory-photo";
 
 
-    document
-    .getElementById("memory-photos")
-    .appendChild(img);
+
+    const photoBox = document.getElementById("memory-photos");
 
 
-    document.getElementById("counter").innerHTML =
-    foundPhotos.length + "/6";
+    if(photoBox){
+
+        photoBox.appendChild(img);
+
+    }
+
+
+
+    const counter = document.getElementById("counter");
+
+
+    if(counter){
+
+        counter.innerHTML = foundPhotos.length + "/6";
+
+    }
+
+
 
 
     if(foundPhotos.length === 6){
 
-        document.getElementById("secret-next").style.display = "block";
-document.getElementById("secret-next").onclick = function(){
-    window.location.href = "secret.html";
-}
+
+        const next = document.getElementById("secret-next");
+
+
+        if(next){
+
+            next.style.display = "block";
+
+
+            next.onclick = function(){
+
+                window.location.href = "secret.html";
+
+            };
+
+        }
+
+    }
+
 
 }
-    function goSecret() {
-    window.location.href = "secret.html";
-}
+
+
 </script>
-
 <div class="secret-box" id="secret">
 
     <div class="secret-content">
