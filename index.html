@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Масюнечк ))</title> 
+    <title>Мой сайт</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <div id="modal" class="modal">
+
         <div class="modal-content">
 
             <img src="./bunny-love.gif" alt="cute bunny" class="gif">
@@ -21,25 +22,31 @@
             <button id="noBtn">Нет</button>
 
         </div>
+
     </div>
 
 
     <script>
+
         const modal = document.getElementById('modal');
         const yesBtn = document.getElementById('yesBtn');
         const noBtn = document.getElementById('noBtn');
+
 
         yesBtn.addEventListener('click', () => {
             window.location.href = 'nextpage.html';
         });
 
+
         noBtn.addEventListener('click', () => {
-            modal.style.display = 'none';
+            window.location.href = 'no.html';
         });
+
 
         window.onload = () => {
             modal.style.display = 'block';
         };
+
     </script>
 
 </body>
