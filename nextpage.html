@@ -235,18 +235,17 @@ if (envelope) {
 }
 
 
+
 function showLoader(url) {
 
     const loader = document.getElementById("loader");
 
-    if(loader){
+    if (loader) {
 
         loader.style.display = "flex";
 
         setTimeout(() => {
-
             window.location.href = url;
-
         }, 1500);
 
     } else {
@@ -259,14 +258,13 @@ function showLoader(url) {
 
 
 
+
 function openSecret() {
 
     const secret = document.getElementById("secret");
 
-    if(secret){
-
+    if (secret) {
         secret.style.display = "flex";
-
     }
 
 }
@@ -277,10 +275,8 @@ function closeSecret() {
 
     const secret = document.getElementById("secret");
 
-    if(secret){
-
+    if (secret) {
         secret.style.display = "none";
-
     }
 
 }
@@ -291,21 +287,23 @@ function closeSecret() {
 let foundPhotos = [];
 
 
+
 let photos = [
 
-"photos/изображение_2026-07-11_234519595.png",
+"изображение_2026-07-11_234519595.png",
 
-"photos/изображение_2026-07-11_234507024.png",
+"изображение_2026-07-11_234507024.png",
 
-"photos/изображение_2026-07-11_234448924.png",
+"изображение_2026-07-11_234448924.png",
 
-"photos/изображение_2026-07-11_234434087.png",
+"изображение_2026-07-11_234434087.png",
 
-"photos/изображение_2026-07-11_234419261.png",
+"изображение_2026-07-11_234419261.png",
 
-"photos/изображение_2026-07-11_234358825.png"
+"изображение_2026-07-11_234358825.png"
 
 ];
+
 
 
 
@@ -313,7 +311,7 @@ let photos = [
 function findPhoto(number) {
 
 
-    if(foundPhotos.includes(number)) {
+    if (foundPhotos.includes(number)) {
 
         return;
 
@@ -337,7 +335,7 @@ function findPhoto(number) {
     const photoBox = document.getElementById("memory-photos");
 
 
-    if(photoBox){
+    if (photoBox) {
 
         photoBox.appendChild(img);
 
@@ -348,7 +346,7 @@ function findPhoto(number) {
     const counter = document.getElementById("counter");
 
 
-    if(counter){
+    if (counter) {
 
         counter.innerHTML = foundPhotos.length + "/6";
 
@@ -357,18 +355,18 @@ function findPhoto(number) {
 
 
 
-    if(foundPhotos.length === 6){
+    if (foundPhotos.length === 6) {
 
 
         const next = document.getElementById("secret-next");
 
 
-        if(next){
+        if (next) {
 
             next.style.display = "block";
 
 
-            next.onclick = function(){
+            next.onclick = function() {
 
                 window.location.href = "secret.html";
 
