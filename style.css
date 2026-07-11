@@ -155,3 +155,35 @@ h1 {
 .no-box h1 {
     font-size: 35px;
 }
+.dark-page {
+    background: #120000;
+}
+
+
+.evil-box {
+    background: rgba(20, 0, 0, 0.85);
+    padding: 50px;
+    border-radius: 15px;
+    text-align: center;
+    color: #ff2222;
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.7);
+    border: 2px solid #8b0000;
+}
+
+
+.evil-box h1 {
+    font-size: 45px;
+    text-shadow: 0 0 10px red;
+}
+
+
+.evil-box button {
+    background: #550000;
+    color: #ffcccc;
+    border: 1px solid #ff2222;
+}
+
+
+.evil-box button:hover {
+    background: #990000;
+}
