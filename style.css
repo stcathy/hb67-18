@@ -6,7 +6,7 @@ body {
 }
 
 
-/* Первое окно */
+/* ПЕРВАЯ СТРАНИЦА */
 
 .modal {
     display: none;
@@ -79,14 +79,14 @@ button {
 }
 
 
-/* Страница письма */
+
+/* СТРАНИЦА ПИСЬМА */
 
 .page {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 40px;
 }
 
 
@@ -120,6 +120,36 @@ button {
 }
 
 
+.closed-letter {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+}
+
+
+.closed-letter p {
+    font-size: 18px;
+}
+
+
+.opened-letter {
+    display: none;
+}
+
+
+.letter.open .closed-letter {
+    display: none;
+}
+
+
+.letter.open .opened-letter {
+    display: block;
+}
+
+
 .text {
     height: 380px;
     overflow-y: auto;
@@ -132,31 +162,19 @@ h1 {
 }
 
 
-/* Страница после кнопки "Нет" */
+
+/* СТРАНИЦА "ТЫ АХУЕЛ?" */
+
+.dark-page {
+    background: #120000;
+}
+
 
 .no-page {
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-
-.no-box {
-    background: #ffd6e7;
-    padding: 40px;
-    border-radius: 30px;
-    text-align: center;
-    color: #d94f8a;
-    box-shadow: 0 5px 20px rgba(255, 105, 180, 0.3);
-}
-
-
-.no-box h1 {
-    font-size: 35px;
-}
-.dark-page {
-    background: #120000;
 }
 
 
