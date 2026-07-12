@@ -6,9 +6,6 @@ body {
     font-family: Arial, sans-serif;
 }
 
-
-/* ПЕРВАЯ СТРАНИЦА */
-
 .modal {
     display: none;
     position: fixed;
@@ -141,9 +138,6 @@ button {
 }
 
 
-
-/* СТРАНИЦА ПИСЬМА */
-
 .page {
     min-height: 100vh;
     display: flex;
@@ -223,9 +217,6 @@ h1 {
     margin-top: 0;
 }
 
-
-
-/* СТРАНИЦА "ТЫ АХУЕЛ?" */
 
 .dark-page {
     background: #120000;
@@ -308,8 +299,6 @@ h1 {
 }
 
 
-/* Разные углы */
-
 .photo:nth-child(1) {
     transform: rotate(-4deg);
 }
@@ -343,8 +332,6 @@ h1 {
 }
 
 
-/* Разная скорость качания */
-
 .photo:nth-child(2n) {
     animation-duration: 6s;
 }
@@ -357,8 +344,6 @@ h1 {
     animation-duration: 7s;
 }
 
-
-/* Покачивание */
 
 @keyframes sway {
 
@@ -398,7 +383,6 @@ h1 {
     color: #d94f8a;
     font-weight: bold;
 }
-/* КОНВЕРТ */
 
 .envelope {
     position: relative;
@@ -517,8 +501,6 @@ h1 {
     animation: float 3s ease-in-out infinite;
 }
 
-
-/* разные позиции */
 
 .sparkles span:nth-child(1) {
     left: 10%;
